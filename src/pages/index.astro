@@ -1,0 +1,1010 @@
+---
+import "../styles/global.css";
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WIFI24NET - Koneksi Internet Super Cepat</title>
+    <meta
+      name="description"
+      content="WIFI24NET menyediakan layanan internet dengan koneksi super cepat dan andal untuk kebutuhan keluarga dan bisnis Anda."
+    />
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <style>
+      /* Custom styles to complement Tailwind */
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc; /* gray-50 */
+      }
+      .gradient-bg {
+        background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+      }
+      /* Styles for FAQ accordion */
+      .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+      }
+    </style>
+  </head>
+  <body class="text-gray-700">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="#"
+          class="flex items-center space-x-2 text-2xl font-bold text-blue-600"
+        >
+          <!-- Inline SVG Logo -->
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-8 w-8 text-blue-500"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+            <line x1="12" y1="20" x2="12.01" y2="20"></line>
+          </svg>
+          <span>WIFI24NET</span>
+        </a>
+        <div class="hidden md:flex items-center space-x-6">
+          <a
+            href="#paket"
+            class="text-gray-600 hover:text-blue-600 transition-colors">Paket</a
+          >
+          <a
+            href="#why-us"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Kenapa Kami?</a
+          >
+          <a
+            href="#testimoni"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Testimoni</a
+          >
+          <a
+            href="#faq"
+            class="text-gray-600 hover:text-blue-600 transition-colors">FAQ</a
+          >
+          <a
+            href="#kontak"
+            class="bg-blue-600 text-white px-5 py-2 rounded-full font-semibold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+            >Hubungi Kami</a
+          >
+        </div>
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"></path></svg
+          >
+        </button>
+      </nav>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+        <a href="#paket" class="block py-2 text-gray-600 hover:text-blue-600"
+          >Paket</a
+        >
+        <a href="#why-us" class="block py-2 text-gray-600 hover:text-blue-600"
+          >Kenapa Kami?</a
+        >
+        <a
+          href="#testimoni"
+          class="block py-2 text-gray-600 hover:text-blue-600">Testimoni</a
+        >
+        <a href="#faq" class="block py-2 text-gray-600 hover:text-blue-600"
+          >FAQ</a
+        >
+        <a
+          href="#kontak"
+          class="block mt-2 bg-blue-600 text-white px-5 py-2 rounded-full font-semibold text-center"
+          >Hubungi Kami</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="relative text-white py-24 sm:py-32 px-6">
+        <div class="absolute inset-0 gradient-bg"></div>
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto text-center relative z-10">
+          <h1
+            class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 text-shadow-lg"
+          >
+            KONEKSI INTERNET SUPER CEPAT
+          </h1>
+          <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
+            Dapatkan koneksi internet yang super cepat dan andal dengan layanan
+            pemasangan WiFi kami!
+          </p>
+          <a
+            href="#paket"
+            class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-xl"
+            >Lihat Paket Internet</a
+          >
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div class="feature-item p-6">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.3.05-3.11.64-1.26 2.11-2.22 3.8-2.6.43-.1.86-.19 1.3-.3l.15-.04c.42-.12.83-.26 1.2-.44.82-.4 1.5-1.07 1.9-1.9.4-1 .4-2.2-.2-3.2s-2.2-.8-3.2-.2c-.83.5-1.5 1.1-1.9 1.9-.18.37-.32.78-.44 1.2l-.04.15c-.1.44-.2 1.25-.3 1.3-.38 1.69-1.34 3.16-2.6 3.8-.8.65-2.27.6-3.11.05z"
+                  ></path>
+                  <path d="m12 15-3-3"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Kecepatan Tinggi
+              </h3>
+              <p>
+                Browsing dan streaming tanpa buffering dengan koneksi fiber
+                optic yang andal.
+              </p>
+            </div>
+            <div class="feature-item p-6">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path
+                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Tanpa Batas Kuota
+              </h3>
+              <p>
+                Gunakan internet sepuasnya tanpa khawatir kehabisan kuota di
+                tengah bulan.
+              </p>
+            </div>
+            <div class="feature-item p-6">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path
+                    d="M10 21h4a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2z"
+                  ></path>
+                  <path
+                    d="M10 15V9a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2a2 2 0 0 1-2 2h-1"
+                  ></path>
+                  <path d="M5.5 10.5a.5.5 0 0 1-.5-.5V9a2 2 0 0 1 2-2h1"></path>
+                  <path
+                    d="M2 13.5a.5.5 0 0 1 .5-.5H4a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1c0-.28.22-.5.5-.5z"
+                  ></path>
+                  <path d="M16 8h2"></path>
+                </svg>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Harga Terjangkau
+              </h3>
+              <p>
+                Dapatkan kualitas internet terbaik dengan harga yang ramah di
+                kantong.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Section -->
+      <section id="paket" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">
+            Paket Internet Only
+          </h2>
+          <div class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+            <p>Pilih paket yang paling sesuai dengan kebutuhan Anda.</p>
+            <p>Biaya pemasangan hanya <strong>Rp 250.000</strong>.</p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Paket 1 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div class="p-6 md:p-8">
+                <h3 class="font-bold text-2xl text-gray-800">Paket 20 Mbps</h3>
+                <p class="text-gray-500 mt-1">
+                  Cocok untuk browsing & sosial media
+                </p>
+                <div class="my-6 flex items-baseline">
+                  <span class="text-4xl font-extrabold text-gray-900"
+                    >Rp 100.000</span
+                  ><span class="ml-1 text-lg font-medium text-gray-500"
+                    >/bulan</span
+                  >
+                </div>
+                <div
+                  class="text-center bg-blue-50 text-blue-800 font-bold py-2 rounded-lg mb-6"
+                >
+                  Up to 20 Mbps
+                </div>
+                <ul class="space-y-3 text-gray-600 mb-8">
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Unlimited Kuota
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Ideal untuk 1-3 Perangkat
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Dukungan Pelanggan
+                  </li>
+                </ul>
+                <a
+                  href="#kontak"
+                  class="block w-full text-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
+
+            <!-- Paket 2 (Popular) -->
+            <div
+              class="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 border-4 border-blue-600 relative"
+            >
+              <div class="absolute top-6 right-6">
+                <span
+                  class="bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider"
+                  >Populer</span
+                >
+              </div>
+              <div class="p-6 md:p-8">
+                <h3 class="font-bold text-2xl text-gray-800">Paket 30 Mbps</h3>
+                <p class="text-gray-500 mt-1">
+                  Streaming film & video call lancar
+                </p>
+                <div class="my-6 flex items-baseline">
+                  <span class="text-4xl font-extrabold text-gray-900"
+                    >Rp 150.000</span
+                  ><span class="ml-1 text-lg font-medium text-gray-500"
+                    >/bulan</span
+                  >
+                </div>
+                <div
+                  class="text-center bg-blue-100 text-blue-800 font-bold py-2 rounded-lg mb-6"
+                >
+                  Up to 30 Mbps
+                </div>
+                <ul class="space-y-3 text-gray-600 mb-8">
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Unlimited Kuota
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Ideal untuk 4-6 Perangkat
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Streaming Kualitas HD
+                  </li>
+                </ul>
+                <a
+                  href="#kontak"
+                  class="block w-full text-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
+
+            <!-- Paket 3 -->
+            <div
+              class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              <div class="p-6 md:p-8">
+                <h3 class="font-bold text-2xl text-gray-800">Paket 50 Mbps</h3>
+                <p class="text-gray-500 mt-1">Gaming online & download cepat</p>
+                <div class="my-6 flex items-baseline">
+                  <span class="text-4xl font-extrabold text-gray-900"
+                    >Rp 250.000</span
+                  ><span class="ml-1 text-lg font-medium text-gray-500"
+                    >/bulan</span
+                  >
+                </div>
+                <div
+                  class="text-center bg-blue-50 text-blue-800 font-bold py-2 rounded-lg mb-6"
+                >
+                  Up to 50 Mbps
+                </div>
+                <ul class="space-y-3 text-gray-600 mb-8">
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Unlimited Kuota
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Prioritas Jaringan
+                  </li>
+                  <li class="flex items-center">
+                    <svg
+                      class="w-5 h-5 text-green-500 mr-2"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"></path></svg
+                    >Upload Cepat untuk Streaming
+                  </li>
+                </ul>
+                <a
+                  href="#kontak"
+                  class="block w-full text-center bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  >Pesan Sekarang</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us Section -->
+      <section id="why-us" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">
+            Kenapa Memilih WIFI24NET?
+          </h2>
+          <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+            Kami bukan sekadar penyedia internet, kami adalah partner
+            konektivitas Anda.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+            <div class="p-6">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M17 18a2 2 0 0 0-2-2H9a2 2 0 0 0-2 2"></path><rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"></rect><circle cx="12" cy="10" r="2"></circle><line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="4"></line><line x1="16" y1="2" x2="16" y2="4"
+                  ></line></svg
+                >
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Dukungan Lokal Cepat Tanggap
+              </h3>
+              <p>
+                Tim kami berbasis lokal dan selalu siap membantu Anda dengan
+                cepat, tanpa birokrasi yang rumit.
+              </p>
+            </div>
+            <div class="p-6">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                  ></polygon></svg
+                >
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Pemasangan Ekspres
+              </h3>
+              <p>
+                Setelah survei lokasi, tim kami akan segera melakukan pemasangan
+                agar Anda bisa cepat online.
+              </p>
+            </div>
+            <div class="p-6">
+              <div
+                class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-8 w-8"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"
+                  ></path><path d="m9 12 2 2 4-4"></path></svg
+                >
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Tanpa Biaya Tersembunyi
+              </h3>
+              <p>
+                Harga yang kami tawarkan transparan. Tidak ada biaya tambahan
+                tak terduga di tagihan bulanan Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Coverage Area Section -->
+      <section id="cakupan" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">
+            Area Jangkauan Kami
+          </h2>
+          <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+            Kami terus memperluas jangkauan. Hubungi kami untuk memastikan area
+            Anda tercover.
+          </p>
+
+          <div
+            class="max-w-3xl mx-auto bg-gray-50 p-6 md:p-8 rounded-2xl shadow-md"
+          >
+            <ul
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-gray-700"
+            >
+              <li class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-blue-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  ></path>
+                </svg>
+                Kel. Tlogowaru
+              </li>
+
+              <li class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-blue-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  ></path>
+                </svg>
+                Kel. Pandanajeng
+              </li>
+
+              <li class="flex items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="w-5 h-5 text-blue-500 mr-2"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                  ></path>
+                </svg>
+                Dan sekitarnya...
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section id="testimoni" class="py-20">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">
+            Apa Kata Pelanggan Kami?
+          </h2>
+          <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+            Kepuasan Anda adalah prioritas utama kami. Lihat pengalaman mereka
+            yang telah bergabung dengan kami.
+          </p>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+              <p class="text-gray-600 mb-6">
+                "Akhirnya ada internet stabil di komplek saya. Buat WFH dan anak
+                sekolah online jadi lancar jaya. Pelayanannya juga ramah dan
+                cepat tanggap. Recommended!"
+              </p>
+              <div class="flex items-center">
+                <img
+                  class="w-12 h-12 rounded-full mr-4"
+                  src="https://placehold.co/100x100/E2E8F0/4A5568?text=AD"
+                  alt="Avatar Budi Santoso"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800">Andi Dwi</p>
+                  <p class="text-sm text-gray-500">Warga Tlogowaru</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+              <p class="text-gray-600 mb-6">
+                "Saya ambil paket 50 Mbps, ping-nya kecil banget, main game
+                online jadi nggak ada lag. Harganya juga lebih murah dibanding
+                provider besar. Mantap!"
+              </p>
+              <div class="flex items-center">
+                <img
+                  class="w-12 h-12 rounded-full mr-4"
+                  src="https://placehold.co/100x100/E2E8F0/4A5568?text=SR"
+                  alt="Avatar Siti Rahayu"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800">Siti Rahma</p>
+                  <p class="text-sm text-gray-500">Mahasiswa & Gamer</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white p-6 md:p-8 rounded-xl shadow-lg">
+              <p class="text-gray-600 mb-6">
+                "Proses pemasangannya cepat, cuma sehari setelah daftar langsung
+                aktif. Tim teknisinya profesional. Kualitas internetnya juga oke
+                buat streaming Netflix."
+              </p>
+              <div class="flex items-center">
+                <img
+                  class="w-12 h-12 rounded-full mr-4"
+                  src="https://placehold.co/100x100/E2E8F0/4A5568?text=EP"
+                  alt="Avatar Eko Prasetyo"
+                />
+                <div>
+                  <p class="font-semibold text-gray-800">Eko Prasetyo</p>
+                  <p class="text-sm text-gray-500">Karyawan Swasta</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners Section -->
+      <section id="partners" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-2">
+            Didukung Oleh
+          </h2>
+          <p class="text-center text-gray-500 mb-12 max-w-2xl mx-auto">
+            Kami bekerja sama dengan partner teknologi terpercaya untuk
+            memberikan layanan terbaik.
+          </p>
+          <div
+            class="flex flex-col items-center space-y-8 md:flex-row md:space-y-0 md:space-x-12 justify-center"
+          >
+            <img
+              src="https://placehold.co/150x80/CBD5E0/4A5568?text=ION"
+              alt="ION Partnership Logo"
+              class="h-16 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+            />
+            <img
+              src="https://placehold.co/150x80/CBD5E0/4A5568?text=Partner+2"
+              alt="Partner 2 Logo"
+              class="h-16 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+            />
+            <img
+              src="https://placehold.co/150x80/CBD5E0/4A5568?text=Partner+3"
+              alt="Partner 3 Logo"
+              class="h-16 opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section id="faq" class="py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+          <h2 class="text-3xl font-bold text-gray-800 text-center mb-12">
+            Pertanyaan yang Sering Diajukan (FAQ)
+          </h2>
+          <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <div class="bg-gray-50 rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-6"
+              >
+                <span class="text-lg font-semibold text-gray-800"
+                  >Berapa lama proses pemasangan?</span
+                >
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path></svg
+                >
+              </button>
+              <div class="faq-answer px-6 pb-6">
+                <p class="text-gray-600">
+                  Proses pemasangan biasanya memakan waktu 1-3 hari kerja
+                  setelah Anda melakukan pendaftaran dan tim kami selesai
+                  melakukan survei di lokasi Anda.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="bg-gray-50 rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-6"
+              >
+                <span class="text-lg font-semibold text-gray-800"
+                  >Apakah ada kontrak berlangganan?</span
+                >
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path></svg
+                >
+              </button>
+              <div class="faq-answer px-6 pb-6">
+                <p class="text-gray-600">
+                  Tidak, layanan kami tidak menggunakan sistem kontrak. Anda
+                  bisa berhenti berlangganan kapan saja tanpa dikenakan denda.
+                  Kami percaya pada kualitas layanan kami untuk membuat Anda
+                  tetap setia.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="bg-gray-50 rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-6"
+              >
+                <span class="text-lg font-semibold text-gray-800"
+                  >Perangkat apa saja yang saya dapatkan?</span
+                >
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path></svg
+                >
+              </button>
+              <div class="faq-answer px-6 pb-6">
+                <p class="text-gray-600">
+                  Kami akan meminjamkan satu unit modem WiFi router selama Anda
+                  berlangganan. Perangkat ini sudah kami optimalkan untuk
+                  memberikan jangkauan sinyal terbaik di rumah Anda.
+                </p>
+              </div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="bg-gray-50 rounded-lg">
+              <button
+                class="faq-question w-full flex justify-between items-center text-left p-6"
+              >
+                <span class="text-lg font-semibold text-gray-800"
+                  >Bagaimana jika koneksi internet saya bermasalah?</span
+                >
+                <svg
+                  class="w-5 h-5 text-gray-500 transform transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  ><path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"></path></svg
+                >
+              </button>
+              <div class="faq-answer px-6 pb-6">
+                <p class="text-gray-600">
+                  Anda dapat langsung menghubungi tim dukungan teknis kami
+                  melalui nomor WhatsApp yang tertera. Tim lokal kami akan
+                  segera merespons dan membantu menyelesaikan masalah Anda
+                  secepat mungkin.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white">
+      <div class="container mx-auto px-6 py-16">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
+        >
+          <div>
+            <h3 class="font-bold text-xl mb-4">WIFI24NET</h3>
+            <p class="text-gray-400">
+              Menghubungkan komunitas dengan internet cepat, andal, dan
+              terjangkau.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-4">Informasi</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="http://wifiduaempat.net"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white"
+                  >Website: wifiduaempat.net</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold text-xl mb-4">Hubungi Kami</h3>
+            <p class="text-gray-400 mb-4">
+              Cek jangkauan dan daftar sekarang melalui WhatsApp!
+            </p>
+            <a
+              href="https://wa.me/628971742224?text=Halo%20WIFI24NET,%20saya%20tertarik%20untuk%20berlangganan%20internet."
+              target="_blank"
+              class="inline-block bg-green-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="inline-block h-6 w-6 mr-2"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                ><path
+                  d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.894 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.886-.001 2.267.655 4.398 1.803 6.12l-1.34 4.885 4.881-1.341z"
+                ></path></svg
+              >
+              0897-1742-224
+            </a>
+          </div>
+        </div>
+        <div
+          class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500"
+        >
+          <p>
+            &copy; {new Date().getFullYear()} WIFI24NET. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+          });
+
+          const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+          mobileMenuLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.add("hidden");
+            });
+          });
+        }
+
+        // FAQ Accordion
+        const faqQuestions = document.querySelectorAll(".faq-question");
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            const answer = question.nextElementSibling as HTMLElement;
+            const icon = question.querySelector("svg") as SVGElement;
+
+            if (!answer || !icon) return;
+
+            if (answer.style.maxHeight) {
+              answer.style.maxHeight = null;
+              icon.style.transform = "rotate(0deg)";
+            } else {
+              // Close other open answers for a cleaner accordion experience
+              document.querySelectorAll(".faq-answer").forEach((ans) => {
+                const htmlAns = ans as HTMLElement;
+                if (htmlAns.style.maxHeight) {
+                  htmlAns.style.maxHeight = null;
+                  const prevIcon =
+                    htmlAns.previousElementSibling?.querySelector(
+                      "svg"
+                    ) as SVGElement | null;
+                  if (prevIcon) {
+                    prevIcon.style.transform = "rotate(0deg)";
+                  }
+                }
+              });
+              answer.style.maxHeight = answer.scrollHeight + "px";
+              icon.style.transform = "rotate(180deg)";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
+
