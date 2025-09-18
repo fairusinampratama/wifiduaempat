@@ -142,14 +142,18 @@ import jujungLogo from "../assets/images/jujung-logo.png";
 
     <main>
       <!-- Hero Section -->
-      <section class="relative text-white py-24 sm:py-32 px-6">
-        <div
-          class="absolute inset-0 bg-cover bg-center"
-          style=`background-image: url(${heroBackgroundImage.src});`
-        >
-        </div>
+      <section class="relative text-white py-24 sm:py-32 px-6 overflow-hidden">
+        <Image
+          src={heroBackgroundImage}
+          alt="Koneksi internet WIFI24NET super cepat di Malang"
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchpriority="high"
+          class="absolute inset-0 w-full h-full object-cover -z-10"
+        />
 
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="absolute inset-0 bg-black opacity-50 -z-10"></div>
 
         <div class="container mx-auto text-center relative z-10">
           <h1
