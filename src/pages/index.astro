@@ -6,6 +6,7 @@ import ionLogo from "../assets/images/ion.png";
 import indotelLogo from "../assets/images/indotel.png";
 import hspLogo from "../assets/images/hsp-logo.png";
 import jujungLogo from "../assets/images/jujung-logo.png";
+import teamPhoto from "../assets/images/team-photo.png";
 ---
 
 <!doctype html>
@@ -49,13 +50,12 @@ import jujungLogo from "../assets/images/jujung-logo.png";
     <!-- Header -->
     <header class="bg-white shadow-md sticky top-0 z-50">
       <nav
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+        class="container mx-auto px-4 md:px-6 py-4 flex justify-between items-center"
       >
         <a
           href="/"
           class="flex items-center space-x-2 text-2xl font-bold text-blue-600"
         >
-          <!-- Inline SVG Logo -->
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="h-8 w-8 text-blue-500"
@@ -71,9 +71,16 @@ import jujungLogo from "../assets/images/jujung-logo.png";
             <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
             <line x1="12" y1="20" x2="12.01" y2="20"></line>
           </svg>
-          <span>WIFI24NET</span>
+          <span class="hidden sm:inline">WIFI24NET</span>
+          <span class="sm:hidden">WIFI24</span>
         </a>
-        <div class="hidden md:flex items-center space-x-6">
+
+        <div class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+          <a
+            href="#tentang"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Tentang</a
+          >
           <a
             href="#paket"
             class="text-gray-600 hover:text-blue-600 transition-colors">Paket</a
@@ -81,12 +88,22 @@ import jujungLogo from "../assets/images/jujung-logo.png";
           <a
             href="#why-us"
             class="text-gray-600 hover:text-blue-600 transition-colors"
-            >Kenapa Kami?</a
+            >Keunggulan</a
+          >
+          <a
+            href="#cakupan"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Cakupan</a
           >
           <a
             href="#testimoni"
             class="text-gray-600 hover:text-blue-600 transition-colors"
             >Testimoni</a
+          >
+          <a
+            href="#lokasi"
+            class="text-gray-600 hover:text-blue-600 transition-colors"
+            >Lokasi</a
           >
           <a
             href="#faq"
@@ -98,10 +115,10 @@ import jujungLogo from "../assets/images/jujung-logo.png";
             >Hubungi Kami</a
           >
         </div>
-        <!-- Mobile Menu Button -->
+
         <button
           id="mobile-menu-button"
-          class="md:hidden text-gray-700 focus:outline-none"
+          class="lg:hidden text-gray-700 focus:outline-none p-2"
         >
           <svg
             class="w-6 h-6"
@@ -117,24 +134,49 @@ import jujungLogo from "../assets/images/jujung-logo.png";
           >
         </button>
       </nav>
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
-        <a href="#paket" class="block py-2 text-gray-600 hover:text-blue-600"
-          >Paket</a
+
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden px-6 pt-2 pb-4 bg-white border-t border-gray-100 shadow-lg"
+      >
+        <a
+          href="#tentang"
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
+          >Tentang Kami</a
         >
-        <a href="#why-us" class="block py-2 text-gray-600 hover:text-blue-600"
-          >Kenapa Kami?</a
+        <a
+          href="#paket"
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
+          >Paket Internet</a
+        >
+        <a
+          href="#why-us"
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
+          >Keunggulan</a
+        >
+        <a
+          href="#cakupan"
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
+          >Area Cakupan</a
         >
         <a
           href="#testimoni"
-          class="block py-2 text-gray-600 hover:text-blue-600">Testimoni</a
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
+          >Testimoni</a
         >
-        <a href="#faq" class="block py-2 text-gray-600 hover:text-blue-600"
+        <a
+          href="#lokasi"
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
+          >Lokasi Kantor</a
+        >
+        <a
+          href="#faq"
+          class="block py-3 border-b border-gray-50 text-gray-600 hover:text-blue-600"
           >FAQ</a
         >
         <a
           href="#kontak"
-          class="block mt-2 bg-blue-600 text-white px-5 py-2 rounded-full font-semibold text-center"
+          class="block mt-4 bg-blue-600 text-white px-5 py-3 rounded-full font-semibold text-center hover:bg-blue-700"
           >Hubungi Kami</a
         >
       </div>
@@ -172,7 +214,144 @@ import jujungLogo from "../assets/images/jujung-logo.png";
           >
         </div>
       </section>
+      <section id="tentang" class="py-20 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="w-full md:w-1/2">
+              <div
+                class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white"
+              >
+                <Image
+                  src={teamPhoto}
+                  alt="Teknisi Fiber Optic"
+                  class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"
+                >
+                </div>
+                <div class="absolute bottom-6 left-6 text-white">
+                  <p class="font-bold text-lg">Mitra Resmi & Terpercaya</p>
+                  <p class="text-sm opacity-90">Melayani Malang & Sekitarnya</p>
+                </div>
+              </div>
+            </div>
 
+            <div class="w-full md:w-1/2">
+              <span
+                class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-600 text-sm font-bold mb-4"
+              >
+                Tentang WIFI24NET
+              </span>
+              <h2
+                class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight"
+              >
+                Transformasi Layanan Internet untuk <span class="text-blue-600"
+                  >Masa Depan</span
+                >
+              </h2>
+
+              <div class="space-y-4 text-gray-600 leading-relaxed text-lg">
+                <p>
+                  <strong>WIFI24NET</strong> adalah penyedia layanan yang bergerak
+                  di bidang Teknologi Informasi dan Layanan Internet, dengan fokus
+                  utama pada distribusi layanan internet ke pelanggan residensial
+                  maupun bisnis.
+                </p>
+                <p>
+                  Sebelumnya beroperasi secara mandiri, kini WIFI24NET
+                  bertransformasi menjadi <strong>mitra strategis</strong> dalam
+                  pemasaran dan penjualan produk internet dari berbagai penyedia
+                  utama. Langkah ini kami ambil untuk memastikan standar kualitas
+                  jaringan yang lebih tinggi bagi pelanggan.
+                </p>
+                <p>
+                  Saat ini, WIFI24NET bermitra resmi dengan <strong
+                    >PT INDOTEL TELEMEDIA SOLUSI</strong
+                  >, <strong>ION Network</strong>, <strong>HSP</strong>, dan <strong
+                    >Jujung</strong
+                  > dalam kerja sama distribusi layanan internet berbasis fiber optic.
+                  Kami memiliki dasar hubungan operasional yang sah dan kuat untuk
+                  menjamin legalitas dan kestabilan layanan.
+                </p>
+                <p>
+                  Komitmen kami adalah menyediakan layanan internet yang stabil,
+                  terjangkau, dan didukung oleh pelayanan pelanggan lokal yang
+                  responsif.
+                </p>
+              </div>
+
+              <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-center space-x-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"></path></svg
+                  >
+                  <span class="font-medium text-gray-700"
+                    >Mitra Resmi Berlisensi</span
+                  >
+                </div>
+                <div class="flex items-center space-x-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"></path></svg
+                  >
+                  <span class="font-medium text-gray-700"
+                    >Infrastruktur Fiber Optic</span
+                  >
+                </div>
+                <div class="flex items-center space-x-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"></path></svg
+                  >
+                  <span class="font-medium text-gray-700"
+                    >Layanan Purna Jual Prima</span
+                  >
+                </div>
+                <div class="flex items-center space-x-2">
+                  <svg
+                    class="w-5 h-5 text-green-500"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    ><path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 13l4 4L19 7"></path></svg
+                  >
+                  <span class="font-medium text-gray-700"
+                    >Cakupan Area Luas</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- Features Section -->
       <section class="py-20 bg-white">
         <div class="container mx-auto px-6">
