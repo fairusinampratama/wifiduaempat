@@ -71,7 +71,7 @@ import teamPhoto from "../assets/images/team-photo.png";
             <line x1="12" y1="20" x2="12.01" y2="20"></line>
           </svg>
           <span class="hidden sm:inline">WIFI24NET</span>
-          <span class="sm:hidden">WIFI24</span>
+          <span class="sm:hidden">WIFI24NET</span>
         </a>
 
         <div class="hidden lg:flex items-center space-x-6 text-sm font-medium">
@@ -233,7 +233,7 @@ import teamPhoto from "../assets/images/team-photo.png";
                 <div class="absolute bottom-6 left-6 text-white">
                   <p class="font-bold text-lg">Mitra Resmi & Terpercaya</p>
                   <p class="text-sm opacity-90">
-                    Melayani Tlogowaru & Pandanajeng
+                    Melayani Malang dan Sekitarnya
                   </p>
                 </div>
               </div>
@@ -1223,19 +1223,23 @@ import teamPhoto from "../assets/images/team-photo.png";
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Fixed Footer -->
     <footer id="kontak" class="bg-gray-800 text-white">
       <div class="container mx-auto px-6 py-16">
         <div
           class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left"
         >
+          <!-- Brand -->
           <div>
             <h3 class="font-bold text-xl mb-4">WIFI24NET</h3>
             <p class="text-gray-400">
-              Menghubungkan komunitas dengan internet cepat, andal, dan
-              terjangkau.
+              Penyedia layanan yang bergerak di bidang Teknologi Informasi dan
+              Layanan Internet, dengan fokus utama pada distribusi layanan
+              internet ke pelanggan residensial maupun bisnis.
             </p>
           </div>
+
+          <!-- Information -->
           <div>
             <h3 class="font-bold text-xl mb-4">Informasi</h3>
             <ul class="space-y-2">
@@ -1243,17 +1247,41 @@ import teamPhoto from "../assets/images/team-photo.png";
                 <a
                   href="http://wifiduaempat.net"
                   target="_blank"
-                  class="text-gray-400 hover:text-white"
-                  >Website: wifiduaempat.net</a
+                  class="text-gray-400 hover:text-white block"
                 >
+                  Website: wifiduaempat.net
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps?cid=551896214614642971"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white block"
+                >
+                  Kantor Tlogowaru: Jl. Raya Tlogowaru No.67, Kedungkandang,
+                  Kota Malang, Jawa Timur 65132
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.google.com/maps/place/WIFI24NET"
+                  target="_blank"
+                  class="text-gray-400 hover:text-white block"
+                >
+                  Kantor Pandanajeng: Jl. Raya Pandanajeng, RT.08/RW.03,
+                  Tumpang, Kabupaten Malang, Jawa Timur 65156
+                </a>
               </li>
             </ul>
           </div>
+
+          <!-- Contact -->
           <div>
             <h3 class="font-bold text-xl mb-4">Hubungi Kami</h3>
             <p class="text-gray-400 mb-4">
               Cek jangkauan dan daftar sekarang melalui WhatsApp!
             </p>
+
             <a
               href="https://wa.me/628971742224?text=Halo%20WIFI24NET,%20saya%20tertarik%20untuk%20berlangganan%20internet."
               target="_blank"
@@ -1277,11 +1305,13 @@ import teamPhoto from "../assets/images/team-photo.png";
             </a>
           </div>
         </div>
+
+        <!-- Copyright -->
         <div
           class="mt-12 border-t border-gray-700 pt-8 text-center text-gray-500"
         >
           <p>
-            &copy; {new Date().getFullYear()} WIFI24NET. All rights reserved.
+            &copy; <span id="year"></span> WIFI24NET. All rights reserved.
           </p>
         </div>
       </div>
